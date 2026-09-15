@@ -5,3 +5,12 @@
     --cream: #f7f5f0;
     --white: #ffffff;
 }
+
+/* GENERAL WEBSITE STYLING */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--cream);
+    color: var(--navy);
+}
