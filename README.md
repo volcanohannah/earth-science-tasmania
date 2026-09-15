@@ -1,12 +1,4 @@
 # earth-science-tasmania
-
-:root {
-    --navy: #15364a;
-    --green: #456c57;
-    --rust: #b95c3b;
-    --cream: #f7f5f0;
-    --white: #ffffff;
-}
 -----------------------------------------
 
  EARTH SCIENCE TASMANIA
