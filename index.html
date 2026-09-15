@@ -6,16 +6,27 @@
     <meta name="description" content="Earth Science Tasmania - Connecting people with Earth science education, experiences and opportunities across Tasmania.">
     <title>Earth Science Tasmania</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- HEADER SECTION -->
-    <!-- Simple navigation bar with logo/name and navigation menu -->
+    <!-- Navigation bar with logo and menu -->
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <!-- Logo/Name area -->
+                <!-- Logo area -->
                 <div class="logo">
-                    <h1>Earth Science Tasmania</h1>
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Placeholder mountain/wave logo -->
+                            <path d="M10 25 L15 15 L20 20 L25 10 L30 25" stroke="#15364a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 28 Q20 32 32 28" stroke="#15364a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Earth Science Tasmania</h1>
+                    </div>
                 </div>
                 
                 <!-- Navigation menu -->
@@ -25,6 +36,9 @@
                     <a href="#get-involved" class="nav-link">Get Involved</a>
                     <a href="#support" class="nav-link">Support Us</a>
                     <a href="#about" class="nav-link">About</a>
+                    <a href="#" class="nav-link nav-search">
+                        <i class="fas fa-search"></i>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -33,120 +47,210 @@
     <!-- MAIN CONTENT -->
     <main>
         <!-- HERO SECTION -->
-        <!-- Large banner with background image, main heading and tagline -->
+        <!-- Large banner with background image and action buttons -->
         <section class="hero" id="home">
+            <div class="hero-overlay"></div>
             <div class="hero-content">
+                <p class="hero-subtitle">Connecting people with</p>
                 <h2 class="hero-title">Earth Science Tasmania</h2>
-                <p class="hero-tagline">Connecting people with Earth science education, experiences and opportunities across Tasmania.</p>
+                <p class="hero-description">A collective of organisations working together to support Earth science education, experiences and opportunities across Tasmania.</p>
+                
+                <!-- Three action buttons -->
+                <div class="action-buttons">
+                    <a href="#teachers" class="action-btn action-btn-green">
+                        <i class="fas fa-book"></i>
+                        I'm a teacher
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#get-involved" class="action-btn action-btn-rust">
+                        <i class="fas fa-users"></i>
+                        I want to get involved
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#support" class="action-btn action-btn-navy">
+                        <i class="fas fa-handshake"></i>
+                        I want to support Earth science
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!-- THREE PATHWAYS SECTION -->
-        <!-- Three main audience pathways presented as prominent cards -->
-        <section class="pathways" id="teachers">
+        <!-- EXPLORE OPPORTUNITIES SECTION -->
+        <!-- Three main pathways with icons and descriptions -->
+        <section class="explore-section" id="teachers">
             <div class="container">
-                <h2 class="section-title">Explore Your Path</h2>
+                <h2 class="section-title">Explore Opportunities</h2>
+                <div class="section-accent"></div>
                 
-                <div class="pathways-grid">
-                    <!-- Pathway 1: For Teachers -->
-                    <div class="pathway-card">
+                <div class="opportunities-grid">
+                    <!-- Opportunity 1: For Teachers -->
+                    <div class="opportunity-card">
+                        <div class="icon-circle icon-circle-green">
+                            <i class="fas fa-book-open"></i>
+                        </div>
                         <h3>For Teachers</h3>
-                        <p>Access Earth science education programs, professional development, incursions, and university opportunities for your students.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <p>Programs, classroom resources, professional learning, school incursions and university experiences.</p>
+                        <a href="#" class="card-link">
+                            Find education opportunities <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
 
-                    <!-- Pathway 2: Get Involved -->
-                    <div class="pathway-card">
+                    <!-- Opportunity 2: Get Involved -->
+                    <div class="opportunity-card">
+                        <div class="icon-circle icon-circle-rust">
+                            <i class="fas fa-people-group"></i>
+                        </div>
                         <h3>Get Involved</h3>
-                        <p>Join our volunteer community and participate in Earth science outreach events, activities and field experiences across Tasmania.</p>
-                        <a href="#" class="btn btn-primary">Explore</a>
+                        <p>Volunteer at Earth science events and activities across Tasmania.</p>
+                        <a href="#" class="card-link">
+                            Volunteer with us <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
 
-                    <!-- Pathway 3: Support Us -->
-                    <div class="pathway-card">
+                    <!-- Opportunity 3: Support Earth Science -->
+                    <div class="opportunity-card">
+                        <div class="icon-circle icon-circle-navy">
+                            <i class="fas fa-handshake"></i>
+                        </div>
                         <h3>Support Earth Science</h3>
-                        <p>Learn how organisations and sponsors can partner with us to strengthen Earth science education and outreach in Tasmania.</p>
-                        <a href="#" class="btn btn-primary">Get Involved</a>
+                        <p>Help us inspire the next generation through sponsorship, partnerships and in-kind support.</p>
+                        <a href="#" class="card-link">
+                            Partner with us <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ABOUT SECTION -->
-        <!-- Explanation of the collective's mission and approach -->
-        <section class="about-section" id="about">
+        <!-- STRONGER TASMANIA SECTION -->
+        <!-- Mission statement with Tasmania map illustration -->
+        <section class="stronger-section" id="about">
             <div class="container">
-                <div class="about-content">
-                    <h2 class="section-title">Working Together</h2>
-                    <p>Earth Science Tasmania brings together leading Earth science education organisations across the state. By collaborating, we strengthen Earth science education and outreach, creating meaningful opportunities for students, teachers, and community members to connect with the fascinating geology and landscapes that make Tasmania unique.</p>
+                <div class="stronger-content">
+                    <div class="stronger-text">
+                        <h2 class="section-title">A Stronger Tasmania Through Earth Science</h2>
+                        <div class="section-accent"></div>
+                        <p>From the classroom to the field and beyond, we work together to share Tasmania's unique geology, build geoscience skills and inspire future opportunities.</p>
+                    </div>
+                    <div class="stronger-illustration">
+                        <!-- Placeholder for Tasmania map illustration -->
+                        <div class="map-placeholder">
+                            <svg viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Simplified Tasmania map shape -->
+                                <path d="M80 20 L120 30 L130 60 L125 100 L115 130 L100 150 L85 140 L70 110 L60 80 L65 40 Z" fill="#d4e4d4" stroke="#456c57" stroke-width="2"/>
+                            </svg>
+                            <p class="map-text">Extraordinary<br>landscapes.<br>Brighter futures.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- NETWORK SECTION -->
-        <!-- Space for partner and network organisation logos -->
-        <section class="network-section" id="support">
+        <!-- Partner and network organisation logos -->
+        <section class="network-section" id="network">
             <div class="container">
                 <h2 class="section-title">Our Network</h2>
-                <p class="section-description">Organisations working together to advance Earth science education in Tasmania</p>
+                <div class="section-accent"></div>
+                <p class="section-description">A diverse group of organisations working together for Earth science in Tasmania.</p>
                 
                 <div class="network-grid">
-                    <!-- Placeholder cards for organisation logos -->
-                    <!-- These will be replaced with actual logos and links -->
-                    <div class="network-placeholder">
-                        <p>AusEarthEd</p>
+                    <!-- Organisation logo placeholders -->
+                    <div class="network-logo">
+                        <div class="logo-placeholder">AusEarthEd</div>
                     </div>
-                    <div class="network-placeholder">
-                        <p>TESEP</p>
+                    <div class="network-logo">
+                        <div class="logo-placeholder">TESEP</div>
                     </div>
-                    <div class="network-placeholder">
-                        <p>University of Tasmania<br>Earth Sciences</p>
+                    <div class="network-logo">
+                        <div class="logo-placeholder">University of Tasmania</div>
                     </div>
-                    <div class="network-placeholder">
-                        <p>GeosciEdTas</p>
+                    <div class="network-logo">
+                        <div class="logo-placeholder">GeosciEdTas</div>
                     </div>
-                    <div class="network-placeholder">
-                        <p>Mineral Resources Tasmania</p>
+                    <div class="network-logo">
+                        <div class="logo-placeholder">Mineral Resources Tasmania</div>
                     </div>
-                    <div class="network-placeholder">
-                        <p>CORE Learning Foundation</p>
+                    <div class="network-logo">
+                        <div class="logo-placeholder">CORE Learning Foundation</div>
                     </div>
-                    <div class="network-placeholder">
-                        <p>AuScope</p>
+                    <div class="network-logo">
+                        <div class="logo-placeholder">AuScope</div>
                     </div>
-                    <div class="network-placeholder">
-                        <p>Geological Society of Australia<br>Tasmania Division</p>
+                    <div class="network-logo">
+                        <div class="logo-placeholder">Geological Society of Australia</div>
                     </div>
-                    <div class="network-placeholder">
-                        <p>Tasmanian Lapidary Clubs</p>
+                    <div class="network-logo">
+                        <div class="logo-placeholder">Tasmanian Lapidary Clubs</div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STAY CONNECTED SECTION -->
+        <!-- Email subscription form -->
+        <section class="stay-connected-section" id="contact">
+            <div class="container">
+                <div class="stay-connected-content">
+                    <h2 class="section-title">Stay Connected</h2>
+                    <div class="section-accent"></div>
+                    <p>Sign up for updates on events, opportunities and resources.</p>
+                    
+                    <form class="newsletter-form" action="#" method="POST">
+                        <input 
+                            type="email" 
+                            class="form-input" 
+                            placeholder="Your email address" 
+                            required
+                        >
+                        <button type="submit" class="form-btn">
+                            Subscribe <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- FOOTER SECTION -->
-    <!-- Simple footer with contact info and links -->
+    <!-- Footer with logo, links and social media -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <!-- Footer logo and tagline -->
+                <div class="footer-logo">
+                    <div class="logo-icon-small">
+                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 25 L15 15 L20 20 L25 10 L30 25" stroke="#f7f5f0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 28 Q20 32 32 28" stroke="#f7f5f0" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
                     <h3>Earth Science Tasmania</h3>
-                    <p>Connecting people with Earth science education, experiences and opportunities across Tasmania.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#teachers">For Teachers</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#support">Support Us</a></li>
-                    </ul>
+
+                <!-- Footer links -->
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#privacy">Privacy</a>
                 </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Email: info@earthsciencetasmania.org</p>
+
+                <!-- Social media links -->
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </div>
             </div>
+
+            <!-- Footer bottom -->
             <div class="footer-bottom">
                 <p>&copy; 2024 Earth Science Tasmania. All rights reserved.</p>
             </div>
