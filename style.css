@@ -1,5 +1,6 @@
 /* ========================================
    EARTH SCIENCE TASMANIA - STYLESHEET
+   Redesigned for professional, modern look
    ======================================== */
 
 /* ROOT VARIABLES - Brand colors and common values
@@ -16,6 +17,9 @@
     --color-text-dark: #15364a;
     --color-text-light: #666666;
     --color-border: #e0e0e0;
+    --color-light-green: #e8f0e6;
+    --color-light-rust: #f5e8e1;
+    --color-light-navy: #e8ecf1;
     
     /* Typography */
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -24,6 +28,7 @@
     --font-size-xl: 24px;
     --font-size-2xl: 32px;
     --font-size-3xl: 48px;
+    --font-size-4xl: 56px;
     
     /* Spacing */
     --spacing-xs: 8px;
@@ -32,10 +37,12 @@
     --spacing-lg: 32px;
     --spacing-xl: 48px;
     --spacing-2xl: 64px;
+    --spacing-3xl: 96px;
     
     /* Other */
     --border-radius: 4px;
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ========================================
@@ -84,20 +91,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-sm) 0;
 }
 
-/* Logo/Name styling */
-.logo h1 {
-    font-size: var(--font-size-xl);
+/* Logo styling - icon and text side by side */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.logo-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-text h1 {
+    font-size: var(--font-size-large);
     color: var(--color-navy);
     font-weight: 700;
+    line-height: 1.2;
 }
 
 /* Navigation menu */
 .nav {
     display: flex;
     gap: var(--spacing-lg);
+    align-items: center;
 }
 
 .nav-link {
@@ -108,11 +134,20 @@ body {
     transition: color 0.3s ease;
     border-bottom: 2px solid transparent;
     padding-bottom: 4px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
 }
 
 .nav-link:hover {
     color: var(--color-green);
     border-bottom-color: var(--color-green);
+}
+
+.nav-search {
+    font-size: var(--font-size-xl);
+    border-bottom: none;
+    padding: 0;
 }
 
 /* ========================================
@@ -121,46 +156,148 @@ body {
 
 /* Large banner section with landscape photo background */
 .hero {
-    background: linear-gradient(rgba(21, 54, 74, 0.5), rgba(21, 54, 74, 0.5)), 
-                url('https://via.placeholder.com/1200x400?text=Tasmania+Landscape') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(21, 54, 74, 0.6) 0%, rgba(69, 108, 87, 0.4) 100%), 
+                url('https://via.placeholder.com/1920x600?text=Tasmania+Landscape') center/cover no-repeat;
     background-attachment: fixed;
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
     padding: var(--spacing-2xl) var(--spacing-md);
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(21, 54, 74, 0.5), transparent);
+    pointer-events: none;
 }
 
 .hero-content {
     color: var(--color-white);
-    max-width: 800px;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-subtitle {
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+    opacity: 0.9;
 }
 
 .hero-title {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-4xl);
     font-weight: 700;
     margin-bottom: var(--spacing-md);
-    line-height: 1.2;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
-.hero-tagline {
-    font-size: var(--font-size-xl);
+.hero-description {
+    font-size: var(--font-size-large);
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.8;
+    margin-bottom: var(--spacing-xl);
+    opacity: 0.95;
+}
+
+/* Action buttons - large prominent buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md) var(--spacing-lg);
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: var(--font-size-base);
+    width: 100%;
+    max-width: 400px;
+    gap: var(--spacing-lg);
+}
+
+.action-btn i {
+    font-size: var(--font-size-xl);
+}
+
+.action-btn-green {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.action-btn-green:hover {
+    background-color: var(--color-navy);
+    transform: translateX(4px);
+}
+
+.action-btn-rust {
+    background-color: var(--color-rust);
+    color: var(--color-white);
+}
+
+.action-btn-rust:hover {
+    background-color: var(--color-navy);
+    transform: translateX(4px);
+}
+
+.action-btn-navy {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+}
+
+.action-btn-navy:hover {
+    background-color: var(--color-green);
+    transform: translateX(4px);
 }
 
 /* ========================================
-   SECTION STYLING
+   SECTION ACCENTS
    ======================================== */
 
-/* Consistent title styling for all sections */
+/* Decorative accent line under section titles */
+.section-accent {
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-rust);
+    margin: 0 auto var(--spacing-lg);
+    border-radius: 2px;
+}
+
+/* ========================================
+   EXPLORE OPPORTUNITIES SECTION
+   ======================================== */
+
+.explore-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    background-color: var(--color-white);
+}
+
 .section-title {
     font-size: var(--font-size-2xl);
     color: var(--color-navy);
     margin-bottom: var(--spacing-lg);
     text-align: center;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .section-description {
@@ -170,92 +307,135 @@ body {
     font-size: var(--font-size-large);
 }
 
-/* ========================================
-   PATHWAYS SECTION
-   ======================================== */
-
-.pathways {
-    padding: var(--spacing-2xl) var(--spacing-md);
-    background-color: var(--color-white);
-}
-
-/* Grid layout for the three pathway cards - responsive */
-.pathways-grid {
+/* Grid layout for opportunity cards - responsive */
+.opportunities-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
 }
 
-/* Individual pathway card styling */
-.pathway-card {
-    padding: var(--spacing-lg);
-    background-color: var(--color-cream);
-    border-left: 4px solid var(--color-green);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Opportunity card styling */
+.opportunity-card {
+    text-align: center;
+    padding: var(--spacing-xl);
 }
 
-.pathway-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow);
-}
-
-.pathway-card h3 {
-    color: var(--color-navy);
-    font-size: var(--font-size-xl);
-    margin-bottom: var(--spacing-sm);
-}
-
-.pathway-card p {
-    color: var(--color-text-light);
-    margin-bottom: var(--spacing-md);
-    line-height: 1.6;
-}
-
-/* ========================================
-   BUTTON STYLING
-   ======================================== */
-
-.btn {
-    display: inline-block;
-    padding: var(--spacing-sm) var(--spacing-md);
-    text-decoration: none;
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: none;
-    font-size: var(--font-size-base);
-}
-
-.btn-primary {
-    background-color: var(--color-green);
+/* Icon circle styling */
+.icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-lg);
+    font-size: 48px;
     color: var(--color-white);
 }
 
-.btn-primary:hover {
-    background-color: var(--color-navy);
+.icon-circle-green {
+    background-color: var(--color-light-green);
+    color: var(--color-green);
+}
+
+.icon-circle-rust {
+    background-color: var(--color-light-rust);
+    color: var(--color-rust);
+}
+
+.icon-circle-navy {
+    background-color: var(--color-light-navy);
+    color: var(--color-navy);
+}
+
+.opportunity-card h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-navy);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.opportunity-card p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
+    font-size: var(--font-size-base);
+}
+
+.card-link {
+    color: var(--color-green);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all 0.3s ease;
+}
+
+.card-link:hover {
+    color: var(--color-rust);
+    transform: translateX(4px);
 }
 
 /* ========================================
-   ABOUT SECTION
+   STRONGER TASMANIA SECTION
    ======================================== */
 
-.about-section {
-    padding: var(--spacing-2xl) var(--spacing-md);
+.stronger-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
     background-color: var(--color-cream);
 }
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+.stronger-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
 }
 
-.about-content p {
+.stronger-text {
+    max-width: 500px;
+}
+
+.stronger-text .section-accent {
+    margin-left: 0;
+}
+
+.stronger-text p {
     font-size: var(--font-size-large);
     color: var(--color-text-dark);
     line-height: 1.8;
+}
+
+/* Tasmania map placeholder */
+.stronger-illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-placeholder {
+    position: relative;
+    width: 250px;
+    height: 300px;
+}
+
+.map-placeholder svg {
+    width: 100%;
+    height: 100%;
+}
+
+.map-text {
+    position: absolute;
+    bottom: 30px;
+    right: -80px;
+    font-size: var(--font-size-large);
+    color: var(--color-rust);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.4;
 }
 
 /* ========================================
@@ -263,23 +443,32 @@ body {
    ======================================== */
 
 .network-section {
-    padding: var(--spacing-2xl) var(--spacing-md);
+    padding: var(--spacing-3xl) var(--spacing-md);
     background-color: var(--color-white);
 }
 
-/* Grid layout for network organisation placeholders - responsive */
+/* Grid layout for network logos - responsive */
 .network-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    align-items: center;
 }
 
-/* Placeholder styling for organisation logos - will be replaced */
-.network-placeholder {
-    aspect-ratio: 1;
+.network-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+}
+
+/* Logo placeholder styling */
+.logo-placeholder {
+    width: 100%;
+    height: 120px;
     background-color: var(--color-cream);
-    border: 2px solid var(--color-border);
+    border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     display: flex;
     align-items: center;
@@ -288,7 +477,85 @@ body {
     padding: var(--spacing-sm);
     color: var(--color-text-light);
     font-weight: 500;
-    min-height: 150px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.logo-placeholder:hover {
+    background-color: var(--color-light-green);
+    border-color: var(--color-green);
+}
+
+/* ========================================
+   STAY CONNECTED SECTION
+   ======================================== */
+
+.stay-connected-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    background: linear-gradient(135deg, rgba(21, 54, 74, 0.3) 0%, rgba(69, 108, 87, 0.2) 100%), 
+                url('https://via.placeholder.com/1920x400?text=Mountains') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+.stay-connected-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stay-connected-content .section-title {
+    color: var(--color-navy);
+}
+
+.stay-connected-content p {
+    font-size: var(--font-size-large);
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Newsletter form styling */
+.newsletter-form {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-input {
+    flex: 1;
+    min-width: 250px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-green);
+    box-shadow: 0 0 0 3px rgba(69, 108, 87, 0.1);
+}
+
+.form-btn {
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--color-navy);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.form-btn:hover {
+    background-color: var(--color-green);
+    transform: translateX(2px);
 }
 
 /* ========================================
@@ -303,110 +570,205 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
 }
 
-.footer-section h3 {
+/* Footer logo section */
+.footer-logo {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.logo-icon-small {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.logo-icon-small svg {
+    width: 100%;
+    height: 100%;
+}
+
+.footer-logo h3 {
     font-size: var(--font-size-large);
-    margin-bottom: var(--spacing-sm);
     color: var(--color-cream);
 }
 
-.footer-section p {
-    color: rgba(247, 245, 240, 0.8);
-    line-height: 1.6;
-    margin-bottom: var(--spacing-sm);
+/* Footer links */
+.footer-links {
+    display: flex;
+    gap: var(--spacing-lg);
 }
 
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section li {
-    margin-bottom: var(--spacing-xs);
-}
-
-.footer-section a {
+.footer-links a {
     color: rgba(247, 245, 240, 0.8);
     text-decoration: none;
+    font-size: var(--font-size-base);
     transition: color 0.3s ease;
 }
 
-.footer-section a:hover {
+.footer-links a:hover {
     color: var(--color-cream);
+}
+
+/* Social media links */
+.footer-social {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: flex-end;
+}
+
+.social-link {
+    color: rgba(247, 245, 240, 0.8);
+    font-size: var(--font-size-xl);
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link:hover {
+    color: var(--color-green);
 }
 
 .footer-bottom {
     border-top: 1px solid rgba(247, 245, 240, 0.2);
-    padding-top: var(--spacing-md);
+    padding-top: var(--spacing-lg);
     text-align: center;
     color: rgba(247, 245, 240, 0.6);
     font-size: 14px;
 }
 
 /* ========================================
-   RESPONSIVE DESIGN - Mobile & Tablet
+   RESPONSIVE DESIGN - Tablet & Mobile
    ======================================== */
+
+/* Tablet size (1024px and below) */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 40px;
+    }
+    
+    .action-buttons {
+        max-width: 100%;
+    }
+    
+    .action-btn {
+        max-width: 100%;
+    }
+    
+    .stronger-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .map-text {
+        position: static;
+        margin-top: var(--spacing-md);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
 
 /* Tablet size (768px and below) */
 @media (max-width: 768px) {
-    /* Adjust heading sizes for smaller screens */
-    .hero-title {
-        font-size: var(--font-size-2xl);
+    .header-content {
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
     }
     
-    .hero-tagline {
+    .logo-text h1 {
         font-size: var(--font-size-base);
+    }
+    
+    .nav {
+        gap: var(--spacing-md);
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .nav-link {
+        font-size: 11px;
+    }
+    
+    .hero {
+        min-height: 400px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-overlay {
+        background: linear-gradient(to bottom, rgba(21, 54, 74, 0.5), rgba(21, 54, 74, 0.5));
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .hero-subtitle {
+        font-size: 12px;
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .action-buttons {
+        align-items: center;
+    }
+    
+    .opportunities-grid {
+        gap: var(--spacing-lg);
+    }
+    
+    .opportunity-card {
+        padding: var(--spacing-lg);
     }
     
     .section-title {
         font-size: var(--font-size-xl);
     }
     
-    /* Stack navigation vertically on mobile */
-    .header-content {
+    .newsletter-form {
         flex-direction: column;
-        gap: var(--spacing-md);
     }
     
-    .nav {
-        gap: var(--spacing-md);
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    /* Reduce padding on smaller screens */
-    .hero {
-        min-height: 350px;
-        padding: var(--spacing-lg) var(--spacing-md);
-    }
-    
-    /* Stack footer sections vertically */
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .form-input {
+        min-width: auto;
     }
 }
 
 /* Mobile size (480px and below) */
 @media (max-width: 480px) {
-    :root {
-        --font-size-base: 14px;
-        --spacing-md: 16px;
-        --spacing-lg: 24px;
+    .logo {
+        gap: var(--spacing-xs);
     }
     
-    .logo h1 {
-        font-size: var(--font-size-large);
+    .logo-icon {
+        width: 32px;
+        height: 32px;
     }
     
-    .hero-title {
-        font-size: 28px;
-    }
-    
-    .hero-tagline {
+    .logo-text h1 {
         font-size: 14px;
     }
     
@@ -415,6 +777,86 @@ body {
     }
     
     .nav-link {
+        font-size: 10px;
+    }
+    
+    .hero {
+        min-height: 300px;
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-description {
         font-size: 14px;
+        margin-bottom: var(--spacing-lg);
+    }
+    
+    .action-btn {
+        flex-direction: column;
+        text-align: center;
+        max-width: 100%;
+        padding: var(--spacing-md);
+        font-size: 14px;
+    }
+    
+    .action-btn i {
+        font-size: var(--font-size-base);
+    }
+    
+    .explore-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-large);
+    }
+    
+    .opportunities-grid {
+        gap: var(--spacing-md);
+    }
+    
+    .opportunity-card {
+        padding: var(--spacing-md);
+    }
+    
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+        font-size: 36px;
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .opportunity-card h3 {
+        font-size: var(--font-size-base);
+    }
+    
+    .opportunity-card p {
+        font-size: 14px;
+    }
+    
+    .stronger-section {
+        padding: var(--spacing-xl) var(--spacing-sm);
+    }
+    
+    .map-placeholder {
+        width: 200px;
+        height: 240px;
+    }
+    
+    .network-section {
+        padding: var(--spacing-xl) var(--spacing-sm);
+    }
+    
+    .network-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .logo-placeholder {
+        height: 100px;
+        font-size: 12px;
     }
 }
