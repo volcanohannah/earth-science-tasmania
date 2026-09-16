@@ -49,7 +49,6 @@
    GLOBAL STYLES
    ======================================== */
 
-/* Reset and base styles for all elements */
 * {
     margin: 0;
     padding: 0;
@@ -68,7 +67,6 @@ body {
     background-color: var(--color-white);
 }
 
-/* Container - used to constrain content width and center it */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -127,13 +125,12 @@ body {
 .nav-link {
     text-decoration: none;
     color: var(--color-text-dark);
-    font-size: var(--font-size-base);
+    font-size: 12px;
     font-weight: 500;
     transition: color 0.3s ease;
     border-bottom: 2px solid transparent;
     padding-bottom: 4px;
     text-transform: uppercase;
-    font-size: 12px;
     letter-spacing: 0.5px;
 }
 
@@ -153,8 +150,7 @@ body {
    ======================================== */
 
 .hero {
-    background: linear-gradient(135deg, rgba(21, 54, 74, 0.6) 0%, rgba(69, 108, 87, 0.4) 100%), 
-                url('https://via.placeholder.com/1920x600?text=Tasmania+Landscape') center/cover no-repeat;
+    background: linear-gradient(135deg, rgba(21, 54, 74, 0.6) 0%, rgba(69, 108, 87, 0.4) 100%), url('https://via.placeholder.com/1920x600?text=Tasmania+Landscape') center/cover no-repeat;
     background-attachment: fixed;
     min-height: 600px;
     display: flex;
@@ -211,7 +207,8 @@ body {
     display: flex;
     flex-direction: row;
     gap: var(--spacing-md);
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: 100%;
 }
 
 .action-btn {
@@ -227,8 +224,9 @@ body {
     border: none;
     font-size: var(--font-size-base);
     width: auto;
-    flex: 1 1 280px;
-    max-width: 400px;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
     gap: var(--spacing-lg);
 }
 
@@ -400,7 +398,7 @@ body {
     color: var(--color-navy);
 }
 
-/* ... keep rest of file unchanged ... */
+/* keep the remainder of the file unchanged */
 
 @media (max-width: 1024px) {
     .hero-title {
@@ -408,9 +406,10 @@ body {
     }
     .action-buttons {
         max-width: 100%;
+        flex-wrap: nowrap;
     }
     .action-btn {
-        max-width: 100%;
+        max-width: none;
     }
     .find-grid {
         grid-template-columns: 1fr;
@@ -473,6 +472,7 @@ body {
     .action-buttons {
         align-items: stretch;
         flex-direction: column;
+        flex-wrap: nowrap;
     }
     .action-btn {
         width: 100%;
