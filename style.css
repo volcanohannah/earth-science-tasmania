@@ -160,7 +160,7 @@ body {
 
 .hero-content {
     color: var(--color-white);
-    max-width: 600px;
+    max-width: 780px;
     position: relative;
     z-index: 1;
 }
