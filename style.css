@@ -269,7 +269,7 @@ body {
 }
 
 /* ========================================
-   SECTION ACCENTS
+   SECTION ACCENTS & STYLING
    ======================================== */
 
 /* Decorative accent line under section titles */
@@ -279,15 +279,6 @@ body {
     background-color: var(--color-rust);
     margin: 0 auto var(--spacing-lg);
     border-radius: 2px;
-}
-
-/* ========================================
-   EXPLORE OPPORTUNITIES SECTION
-   ======================================== */
-
-.explore-section {
-    padding: var(--spacing-3xl) var(--spacing-md);
-    background-color: var(--color-white);
 }
 
 .section-title {
@@ -300,28 +291,98 @@ body {
     letter-spacing: 1px;
 }
 
-.section-description {
+.section-subtitle {
     text-align: center;
     color: var(--color-text-light);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     font-size: var(--font-size-large);
 }
 
-/* Grid layout for opportunity cards - responsive */
-.opportunities-grid {
+.section-description {
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-large);
+}
+
+/* ========================================
+   FIND WHAT YOU NEED SECTION
+   ======================================== */
+
+.find-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    background-color: var(--color-white);
+}
+
+.find-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--spacing-xl);
     margin-top: var(--spacing-xl);
 }
 
-/* Opportunity card styling */
-.opportunity-card {
-    text-align: center;
-    padding: var(--spacing-xl);
+.find-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Icon circle styling */
+.find-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.find-card-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.find-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.find-card:hover .find-card-image img {
+    transform: scale(1.05);
+}
+
+.find-card-overlay {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+}
+
+.find-card-content {
+    padding: var(--spacing-xl);
+    background-color: var(--color-white);
+}
+
+.find-card-content h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-navy);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.find-card-content p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.8;
+    font-size: var(--font-size-base);
+}
+
+/* ========================================
+   ICON CIRCLES
+   ======================================== */
+
 .icon-circle {
     width: 100px;
     height: 100px;
@@ -329,7 +390,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto var(--spacing-lg);
     font-size: 48px;
     color: var(--color-white);
 }
@@ -349,7 +409,53 @@ body {
     color: var(--color-navy);
 }
 
-.opportunity-card h3 {
+/* ========================================
+   EDUCATION SECTION
+   ======================================== */
+
+.education-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    background-color: var(--color-cream);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.education-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.education-logo {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--color-cream);
+    border-radius: var(--border-radius);
+}
+
+.education-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.education-card h3 {
     font-size: var(--font-size-xl);
     color: var(--color-navy);
     margin-bottom: var(--spacing-sm);
@@ -357,12 +463,94 @@ body {
     letter-spacing: 0.5px;
 }
 
-.opportunity-card p {
+.education-card p {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+}
+
+.education-card p strong {
+    color: var(--color-navy);
+    font-weight: 600;
+}
+
+/* ========================================
+   EXPLORE SECTION
+   ======================================== */
+
+.explore-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    background-color: var(--color-white);
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.explore-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.explore-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.explore-card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.explore-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.explore-card:hover .explore-card-image img {
+    transform: scale(1.05);
+}
+
+.explore-card-content {
+    padding: var(--spacing-xl);
+    background-color: var(--color-white);
+    text-align: center;
+}
+
+.explore-icon {
+    font-size: 48px;
+    color: var(--color-rust);
+    margin-bottom: var(--spacing-md);
+}
+
+.explore-card h3 {
+    font-size: var(--font-size-xl);
+    color: var(--color-navy);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.explore-card p {
     color: var(--color-text-light);
     margin-bottom: var(--spacing-lg);
-    line-height: 1.8;
     font-size: var(--font-size-base);
 }
+
+/* ========================================
+   CARD LINKS
+   ======================================== */
 
 .card-link {
     color: var(--color-green);
@@ -380,65 +568,6 @@ body {
 }
 
 /* ========================================
-   STRONGER TASMANIA SECTION
-   ======================================== */
-
-.stronger-section {
-    padding: var(--spacing-3xl) var(--spacing-md);
-    background-color: var(--color-cream);
-}
-
-.stronger-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-3xl);
-    align-items: center;
-}
-
-.stronger-text {
-    max-width: 500px;
-}
-
-.stronger-text .section-accent {
-    margin-left: 0;
-}
-
-.stronger-text p {
-    font-size: var(--font-size-large);
-    color: var(--color-text-dark);
-    line-height: 1.8;
-}
-
-/* Tasmania map placeholder */
-.stronger-illustration {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.map-placeholder {
-    position: relative;
-    width: 250px;
-    height: 300px;
-}
-
-.map-placeholder svg {
-    width: 100%;
-    height: 100%;
-}
-
-.map-text {
-    position: absolute;
-    bottom: 30px;
-    right: -80px;
-    font-size: var(--font-size-large);
-    color: var(--color-rust);
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.4;
-}
-
-/* ========================================
    NETWORK SECTION
    ======================================== */
 
@@ -447,7 +576,6 @@ body {
     background-color: var(--color-white);
 }
 
-/* Grid layout for network logos - responsive */
 .network-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -461,15 +589,27 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 120px;
+    background-color: var(--color-cream);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-sm);
+    transition: all 0.3s ease;
+}
+
+.network-logo:hover {
+    background-color: var(--color-light-green);
+    transform: scale(1.02);
+}
+
+.network-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 /* Logo placeholder styling */
 .logo-placeholder {
     width: 100%;
-    height: 120px;
-    background-color: var(--color-cream);
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -478,12 +618,154 @@ body {
     color: var(--color-text-light);
     font-weight: 500;
     font-size: 14px;
-    transition: all 0.3s ease;
 }
 
-.logo-placeholder:hover {
-    background-color: var(--color-light-green);
-    border-color: var(--color-green);
+.network-cta {
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+}
+
+/* ========================================
+   GET INVOLVED SECTION
+   ======================================== */
+
+.get-involved-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    background-color: var(--color-cream);
+}
+
+.get-involved-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.get-involved-text .section-title {
+    text-align: left;
+}
+
+.get-involved-text .section-accent {
+    margin-left: 0;
+}
+
+.get-involved-text p:first-of-type {
+    font-size: var(--font-size-xl);
+    color: var(--color-navy);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.get-involved-description {
+    font-size: var(--font-size-large);
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-xl);
+}
+
+.get-involved-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ========================================
+   SUPPORT SECTION
+   ======================================== */
+
+.support-section {
+    padding: var(--spacing-3xl) var(--spacing-md);
+    background-color: var(--color-white);
+}
+
+.support-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+    align-items: center;
+}
+
+.support-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.support-text .section-title {
+    text-align: left;
+}
+
+.support-text .section-accent {
+    margin-left: 0;
+}
+
+.support-text p:first-of-type {
+    font-size: var(--font-size-xl);
+    color: var(--color-navy);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.support-description {
+    font-size: var(--font-size-large);
+    color: var(--color-text-light);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    margin-bottom: var(--spacing-md);
+    margin-right: var(--spacing-md);
+}
+
+.btn-primary {
+    background-color: var(--color-navy);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-green);
+    transform: translateX(2px);
+}
+
+.btn-secondary {
+    background-color: var(--color-green);
+    color: var(--color-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-navy);
+    transform: translateX(2px);
+}
+
+.btn-tertiary {
+    background-color: transparent;
+    color: var(--color-navy);
+    border: 2px solid var(--color-navy);
+    display: block;
+}
+
+.btn-tertiary:hover {
+    background-color: var(--color-light-navy);
 }
 
 /* ========================================
@@ -510,7 +792,11 @@ body {
 .stay-connected-content p {
     font-size: var(--font-size-large);
     color: var(--color-text-light);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+}
+
+.stay-connected-subtitle {
+    margin-bottom: var(--spacing-xl) !important;
 }
 
 /* Newsletter form styling */
@@ -558,6 +844,26 @@ body {
     transform: translateX(2px);
 }
 
+.social-icons {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    margin-top: var(--spacing-xl);
+}
+
+.social-link {
+    color: var(--color-text-dark);
+    font-size: var(--font-size-xl);
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link:hover {
+    color: var(--color-green);
+}
+
 /* ========================================
    FOOTER
    ======================================== */
@@ -596,12 +902,19 @@ body {
 .footer-logo h3 {
     font-size: var(--font-size-large);
     color: var(--color-cream);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-tagline {
+    font-size: 14px;
+    color: rgba(247, 245, 240, 0.7);
 }
 
 /* Footer links */
 .footer-links {
     display: flex;
     gap: var(--spacing-lg);
+    flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -622,16 +935,11 @@ body {
     justify-content: flex-end;
 }
 
-.social-link {
+.footer-social .social-link {
     color: rgba(247, 245, 240, 0.8);
-    font-size: var(--font-size-xl);
-    transition: color 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.social-link:hover {
+.footer-social .social-link:hover {
     color: var(--color-green);
 }
 
@@ -661,13 +969,12 @@ body {
         max-width: 100%;
     }
     
-    .stronger-content {
+    .get-involved-content {
         grid-template-columns: 1fr;
     }
     
-    .map-text {
-        position: static;
-        margin-top: var(--spacing-md);
+    .support-content {
+        grid-template-columns: 1fr;
     }
     
     .footer-content {
@@ -736,12 +1043,16 @@ body {
         align-items: center;
     }
     
-    .opportunities-grid {
+    .find-grid {
         gap: var(--spacing-lg);
     }
     
-    .opportunity-card {
-        padding: var(--spacing-lg);
+    .education-grid {
+        gap: var(--spacing-lg);
+    }
+    
+    .explore-grid {
+        gap: var(--spacing-lg);
     }
     
     .section-title {
@@ -754,6 +1065,20 @@ body {
     
     .form-input {
         min-width: auto;
+    }
+    
+    .get-involved-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .support-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        margin-right: 0;
+        margin-bottom: var(--spacing-md);
     }
 }
 
@@ -806,7 +1131,27 @@ body {
         font-size: var(--font-size-base);
     }
     
+    .find-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .education-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
     .explore-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .network-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .get-involved-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .support-section {
         padding: var(--spacing-xl) var(--spacing-md);
     }
     
@@ -814,11 +1159,11 @@ body {
         font-size: var(--font-size-large);
     }
     
-    .opportunities-grid {
+    .find-grid {
         gap: var(--spacing-md);
     }
     
-    .opportunity-card {
+    .find-card-content {
         padding: var(--spacing-md);
     }
     
@@ -829,25 +1174,20 @@ body {
         margin-bottom: var(--spacing-md);
     }
     
-    .opportunity-card h3 {
-        font-size: var(--font-size-base);
+    .education-grid {
+        gap: var(--spacing-md);
     }
     
-    .opportunity-card p {
-        font-size: 14px;
+    .education-card {
+        padding: var(--spacing-md);
     }
     
-    .stronger-section {
-        padding: var(--spacing-xl) var(--spacing-sm);
+    .explore-grid {
+        gap: var(--spacing-md);
     }
     
-    .map-placeholder {
-        width: 200px;
-        height: 240px;
-    }
-    
-    .network-section {
-        padding: var(--spacing-xl) var(--spacing-sm);
+    .explore-card-content {
+        padding: var(--spacing-md);
     }
     
     .network-grid {
@@ -855,8 +1195,33 @@ body {
         gap: var(--spacing-sm);
     }
     
-    .logo-placeholder {
-        height: 100px;
-        font-size: 12px;
+    .network-logo {
+        min-height: 100px;
+    }
+    
+    .stay-connected-section {
+        padding: var(--spacing-xl) var(--spacing-sm);
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .form-input {
+        min-width: auto;
+    }
+    
+    .social-icons {
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-lg);
+    }
+    
+    .btn-primary,
+    .btn-secondary,
+    .btn-tertiary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
     }
 }
