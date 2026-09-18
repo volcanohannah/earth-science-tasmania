@@ -54,7 +54,7 @@ body {
 .nav-link { text-decoration: none; color: var(--color-text-dark); font-size: 12px; font-weight: 500; transition: color 0.3s ease; border-bottom: 2px solid transparent; padding-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
 .nav-link:hover { color: var(--color-green); border-bottom-color: var(--color-green); }
 .nav-search { font-size: var(--font-size-xl); border-bottom: none; padding: 0; }
-.hero { background: linear-gradient(135deg, rgba(21, 54, 74, 0.6) 0%, rgba(69, 108, 87, 0.4) 100%), url('https://via.placeholder.com/1920x600?text=Tasmania+Landscape') center/cover no-repeat; background-position: center; min-height: 520px; display: flex; align-items: center; justify-content: flex-start; padding: var(--spacing-3xl) var(--spacing-md); position: relative; }
+.hero { background: linear-gradient(135deg, rgba(21, 54, 74, 0.6) 0%, rgba(69, 108, 87, 0.4) 100%), url('images/Cradle Mountain.png') center/cover no-repeat; background-position: center; min-height: 520px; display: flex; align-items: center; justify-content: flex-start; padding: var(--spacing-3xl) var(--spacing-md); position: relative; }
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(21, 54, 74, 0.5), transparent); pointer-events: none; }
 .hero-content { color: var(--color-white); max-width: 900px; position: relative; z-index: 1; }
 .hero-subtitle { font-size: var(--font-size-base); font-weight: 400; letter-spacing: 1px; text-transform: uppercase; margin-bottom: var(--spacing-sm); opacity: 0.9; }
