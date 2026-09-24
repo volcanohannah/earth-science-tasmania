@@ -3,456 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Earth Science Tasmania - Connecting people with Earth science education, experiences and opportunities across Tasmania.">
-    <title>Earth Science Tasmania</title>
+    <meta name="description" content="Tasmanian Geoscience Forum — connecting Earth science education and outreach organisations across Tasmania.">
+    <title>Tasmanian Geoscience Forum | Earth Science Tasmania</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- HEADER SECTION -->
-    <!-- Navigation bar with logo and menu -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <!-- Logo area -->
-                <div class="logo">
-                    <div class="logo-icon">
-                        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Placeholder mountain/wave logo -->
-                            <path d="M10 25 L15 15 L20 20 L25 10 L30 25" stroke="#15364a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 28 Q20 32 32 28" stroke="#15364a" stroke-width="2" fill="none" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text">
-                        <h1>Earth Science Tasmania</h1>
-                    </div>
-                </div>
-                
-                <!-- Navigation menu -->
-                <nav class="nav">
-                    <a href="#home" class="nav-link">Home</a>
-                    <a href="#for-teachers" class="nav-link">For Teachers</a>
-                    <a href="#events-opportunities" class="nav-link">Events & Opportunities</a>
-                    <a href="#explore-tasmania" class="nav-link">Explore Tasmania</a>
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#" class="nav-link nav-search">
-                        <i class="fas fa-search"></i>
-                    </a>
-                </nav>
-            </div>
+        <div class="container header-content">
+            <a class="brand" href="#home" aria-label="Earth Science Tasmania home">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 25 L15 15 L20 20 L25 10 L30 25" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 28 Q20 32 32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
+                    </svg>
+                </span>
+                <span>Earth Science Tasmania</span>
+            </a>
+
+            <nav class="nav" aria-label="Main navigation">
+                <a href="#home">Home</a>
+                <a href="#education-providers">Education Providers</a>
+                <a href="#get-involved">Get Involved</a>
+            </nav>
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
     <main>
-        <!-- HERO SECTION -->
-        <!-- Large banner with background image and action buttons -->
         <section class="hero" id="home">
             <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <p class="hero-subtitle">Connecting people with</p>
-                <h2 class="hero-title">Earth Science Tasmania</h2>
-                <p class="hero-description">A collective of organisations working together to support Earth science education, experiences and opportunities across Tasmania.</p>
-                
-                <!-- Three action buttons -->
-                <div class="action-buttons">
-                    <a href="#for-teachers" class="action-btn action-btn-green">
-                        <i class="fas fa-book"></i>
-                        I'm a teacher
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#events-opportunities" class="action-btn action-btn-rust">
-                        <i class="fas fa-users"></i>
-                        I want to get involved
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#support" class="action-btn action-btn-navy">
-                        <i class="fas fa-handshake"></i>
-                        I want to support Earth science
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
+            <div class="container hero-content">
+                <p class="eyebrow">Tasmanian Geoscience Forum · November 2026</p>
+                <h1>Connecting Earth Science Education and Outreach Across Tasmania</h1>
+                <p class="hero-intro">We're bringing together Tasmania's Earth science education and outreach organisations to make it easier for teachers, communities and industry to connect with existing programs and opportunities.</p>
             </div>
         </section>
 
-        <!-- FIND WHAT YOU NEED SECTION -->
-        <!-- Three main pathways with images and descriptions -->
-        <section class="find-section" id="find-what">
+        <section class="section education-section" id="education-providers">
             <div class="container">
-                <h2 class="section-title">Find What You Need</h2>
-                <p class="section-subtitle">Choose a pathway to explore opportunities, resources and ways to get involved.</p>
-                <div class="section-accent"></div>
-                
-                <div class="find-grid">
-                    <!-- Pathway 1: For Teachers -->
-                    <div class="find-card">
-                        <div class="find-card-image">
-                            <img src="images/Teacher PD.jpg" alt="Teachers participating in professional development">
-                        </div>
-                        <div class="find-card-overlay">
-                            <div class="icon-circle icon-circle-green">
-                                <i class="fas fa-book-open"></i>
-                            </div>
-                        </div>
-                        <div class="find-card-content">
-                            <h3>For Teachers</h3>
-                            <p>Programs, classroom resources, professional learning, school incursions and university experiences.</p>
-                            <a href="#" class="card-link">
-                                Find education opportunities <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Pathway 2: Get Involved -->
-                    <div class="find-card">
-                        <div class="find-card-image">
-                            <img src="images/Tour guiding.JPG" alt="Tour guiding in Tasmania">
-                        </div>
-                        <div class="find-card-overlay">
-                            <div class="icon-circle icon-circle-rust">
-                                <i class="fas fa-people-group"></i>
-                            </div>
-                        </div>
-                        <div class="find-card-content">
-                            <h3>Get Involved</h3>
-                            <p>Volunteer at Earth science events and activities across Tasmania.</p>
-                            <a href="#" class="card-link">
-                                Volunteer with us <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Pathway 3: Support Earth Science -->
-                    <div class="find-card">
-                        <div class="find-card-image">
-                            <img src="images/ParkervillePS23.JPG" alt="Close-up of geological rock formation">
-                        </div>
-                        <div class="find-card-overlay">
-                            <div class="icon-circle icon-circle-navy">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                        </div>
-                        <div class="find-card-content">
-                            <h3>Support Earth Science</h3>
-                            <p>Help us inspire the next generation through sponsorship, partnerships and in-kind support.</p>
-                            <a href="#" class="card-link">
-                                Partner with us <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- EDUCATION SECTION -->
-        <!-- Schools and educational pathways -->
-        <section class="education-section" id="for-teachers">
-            <div class="container">
-                <h2 class="section-title">Education Pathways</h2>
-                <p class="section-subtitle">Resources and opportunities for all levels of education.</p>
+                <p class="eyebrow eyebrow-dark">Education and outreach</p>
+                <h2>Our Education Providers</h2>
                 <div class="section-accent"></div>
 
-                <div class="education-grid">
-                    <!-- Primary Schools -->
-                    <div class="education-card">
-                        <a href="https://ausearthed.com.au/" class="education-logo" target="_blank" rel="noreferrer" aria-label="AusEarthEd website">
+                <div class="provider-grid">
+                    <article class="provider-card">
+                        <div class="provider-logo">
                             <img src="images/AusEarthEd.png" alt="AusEarthEd logo">
-                        </a>
-                        <h3>Primary Schools</h3>
-                        <p><strong>AusEarthEd</strong></p>
-                        <p>Engaging Earth science learning experiences for primary students.</p>
-                        <a href="https://ausearthed.com.au/" target="_blank" rel="noreferrer" class="card-link">
-                            Explore <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                        </div>
+                        <h3>AusEarthEd</h3>
+                        <p>Primary school Earth science incursions, classroom resources and teacher professional development.</p>
+                        <a class="button button-outline" href="https://ausearthed.com.au/" target="_blank" rel="noreferrer">Visit website</a>
+                    </article>
 
-                    <!-- Secondary Schools -->
-                    <div class="education-card">
-                        <a href="https://tesep.org.au/" class="education-logo" target="_blank" rel="noreferrer" aria-label="TESEP website">
+                    <article class="provider-card">
+                        <div class="provider-logo">
                             <img src="images/TESEP.png" alt="TESEP logo">
-                        </a>
-                        <h3>Secondary Schools</h3>
-                        <p><strong>TESEP</strong></p>
-                        <p>Secondary Earth science programs and teacher PD.</p>
-                        <a href="https://tesep.org.au/" target="_blank" rel="noreferrer" class="card-link">
-                            Explore <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                        </div>
+                        <h3>TESEP</h3>
+                        <p>Secondary school Earth science education and teacher professional development.</p>
+                        <a class="button button-outline" href="https://tesep.org.au/" target="_blank" rel="noreferrer">Visit website</a>
+                    </article>
 
-                    <!-- University & Pathways -->
-                    <div class="education-card">
-                        <a href="https://www.utas.edu.au/community-and-partners/schools/teachers" class="education-logo" target="_blank" rel="noreferrer" aria-label="University of Tasmania school visits website">
+                    <article class="provider-card">
+                        <div class="provider-logo">
                             <img src="images/university%20of%20tasmania.png" alt="University of Tasmania logo">
-                        </a>
-                        <h3>University & Pathways</h3>
-                        <p><strong>University of Tasmania</strong></p>
-                        <p>School visits, university experiences, events and pathways.</p>
-                        <a href="https://www.utas.edu.au/community-and-partners/schools/teachers" target="_blank" rel="noreferrer" class="card-link">
-                            Explore <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                        </div>
+                        <h3>University of Tasmania – Earth Sciences</h3>
+                        <p>School engagement, university experiences and Earth science outreach.</p>
+                        <a class="button button-outline" href="https://www.utas.edu.au/community-and-partners/schools/teachers" target="_blank" rel="noreferrer">Visit website</a>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- EXPLORE EARTH SCIENCE TASMANIA SECTION -->
-        <!-- Four exploration pathways -->
-        <section class="explore-section" id="explore-tasmania">
-            <div class="container">
-                <h2 class="section-title">Explore Earth Science Tasmania</h2>
-                <p class="section-subtitle">Discover Tasmania's unique geology, places, resources and community.</p>
-                <div class="section-accent"></div>
-                
-                <div class="explore-grid">
-                    <!-- Geology -->
-                    <div class="explore-card">
-                        <div class="explore-card-image">
-                            <img src="images/painted%20cliffs.png" alt="Tasmanian geological formations">
-                        </div>
-                        <div class="explore-card-content">
-                            <div class="explore-icon">
-                                <i class="fas fa-map-location-dot"></i>
-                            </div>
-                            <h3>Explore Tasmania's Geology</h3>
-                            <p>Where to go and what to see.</p>
-                            <a href="#" class="card-link">
-                                GeosciEdTas <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Fossicking -->
-                    <div class="explore-card fossicking-card">
-                        <div class="explore-card-image fossicking-image">
-                            <img src="images/Fossick.jpeg" alt="Fossicking and rock hunting in Tasmania">
-                        </div>
-                        <div class="explore-card-content">
-                            <div class="explore-icon">
-                                <i class="fas fa-gem"></i>
-                            </div>
-                            <h3>Fossicking</h3>
-                            <p>Information about fossicking areas, rules and licences.</p>
-                            <a href="https://www.mrt.tas.gov.au/prospecting_and_fossicking/fossicking_areas" target="_blank" rel="noreferrer" class="card-link">
-                                Mineral Resources Tasmania <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Clubs & Community -->
-                    <div class="explore-card">
-                        <div class="explore-card-image">
-                            <img src="images/Gemstones.png" alt="Community clubs and groups gathered together">
-                        </div>
-                        <div class="explore-card-content">
-                            <div class="explore-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3>Clubs & Community</h3>
-                            <p>Find lapidary, mineral and geological groups around Tasmania.</p>
-                            <a href="#" class="card-link">
-                                Explore clubs <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Events -->
-                    <div class="explore-card">
-                        <div class="explore-card-image">
-                            <img src="https://via.placeholder.com/400x250?text=Earth+Science+Events" alt="Earth science public talks and field trips">
-                        </div>
-                        <div class="explore-card-content">
-                            <div class="explore-icon">
-                                <i class="fas fa-calendar"></i>
-                            </div>
-                            <h3>Events</h3>
-                            <p>Public talks, field trips, workshops and more.</p>
-                            <a href="#" class="card-link">
-                                See what's on <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- OUR NETWORK SECTION -->
-        <!-- Partner and network organisation logos -->
-        <section class="network-section" id="network">
-            <div class="container">
-                <h2 class="section-title">Our Network</h2>
-                <p class="section-description">A diverse group of organisations working together for Earth science in Tasmania.</p>
-                <div class="section-accent"></div>
-                
-                <div class="network-grid">
-                    <!-- Organisation logos -->
-                    <a class="network-logo" href="https://ausearthed.com.au/" target="_blank" rel="noreferrer" aria-label="AusEarthEd website">
-                        <img src="images/AusEarthEd.png" alt="AusEarthEd logo">
-                    </a>
-                    <a class="network-logo" href="https://tesep.org.au/" target="_blank" rel="noreferrer" aria-label="TESEP website">
-                        <img src="images/TESEP.png" alt="TESEP logo">
-                    </a>
-                    <a class="network-logo" href="https://www.utas.edu.au/community-and-partners/schools/teachers" target="_blank" rel="noreferrer" aria-label="University of Tasmania schools website">
-                        <img src="images/university%20of%20tasmania.png" alt="University of Tasmania logo">
-                    </a>
-                    <div class="network-logo">
-                        <div class="logo-placeholder">GeosciEdTas</div>
-                    </div>
-                    <div class="network-logo">
-                        <div class="logo-placeholder">Mineral Resources Tasmania</div>
-                    </div>
-                    <div class="network-logo">
-                        <div class="logo-placeholder">CoRE Learning Foundation</div>
-                    </div>
-                    <div class="network-logo">
-                        <div class="logo-placeholder">AuScope</div>
-                    </div>
-                    <div class="network-logo">
-                        <div class="logo-placeholder">Geological Society of Australia</div>
-                    </div>
-                    <div class="network-logo">
-                        <div class="logo-placeholder">Lapidary Clubs Tasmania</div>
+        <section class="section involvement-section" id="get-involved">
+            <div class="container involvement-content">
+                <div>
+                    <p class="eyebrow eyebrow-dark">A collaborative approach</p>
+                    <h2>Help Shape the Future of Earth Science Education in Tasmania</h2>
+                    <div class="section-accent section-accent-left"></div>
+                    <p>We're developing a collaborative approach to Earth science education and outreach and are seeking expressions of interest from potential industry partners, sponsors and volunteers.</p>
+                    <div class="button-group">
+                        <a class="button button-primary" href="#proposal-placeholder">Read Our Proposal</a>
+                        <a class="button button-rust" href="#registration-placeholder">Register Your Interest</a>
                     </div>
                 </div>
 
-                <div class="network-cta">
-                    <a href="#" class="btn-primary">Meet the network <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </section>
-
-        <!-- GET INVOLVED SECTION -->
-        <!-- Call to action for volunteering and participation -->
-        <section class="get-involved-section" id="events-opportunities">
-            <div class="container">
-                <div class="get-involved-content">
-                    <div class="get-involved-text">
-                        <h2 class="section-title">Get Involved</h2>
-                        <p>Help us share Earth science.</p>
-                        <p class="get-involved-description">Our events and educational programs rely on enthusiastic people from across the Tasmanian Earth science community.</p>
-                        <a href="#" class="btn-secondary">
-                            Register as a volunteer <i class="fas fa-arrow-right"></i>
-                        </a>
+                <div class="placeholder-panel" aria-label="Forum resources">
+                    <div class="placeholder-item" id="proposal-placeholder">
+                        <strong>Proposal document</strong>
+                        <span>Link to be added once confirmed.</span>
                     </div>
-                    <div class="get-involved-image">
-                        <img src="https://via.placeholder.com/500x400?text=Volunteers+in+Tasmania" alt="Volunteers participating in Earth science activities">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SUPPORT EARTH SCIENCE EDUCATION SECTION -->
-        <!-- Sponsorship and partnership information -->
-        <section class="support-section" id="support">
-            <div class="container">
-                <div class="support-content">
-                    <div class="support-image">
-                        <img src="images/ParkervillePS23.JPG" alt="Tasmanian landscape with dolerite formations">
-                    </div>
-                    <div class="support-text">
-                        <h2 class="section-title">Support Earth Science Education</h2>
-                        <p>Help us inspire the next generation of earth scientists.</p>
-                        <p class="support-description">Support through funding, sponsorship, equipment, expertise, volunteering and more.</p>
-                        <a href="#" class="btn-secondary">
-                            Partner with us <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="#" class="btn-tertiary">
-                            Download sponsorship information
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- STAY CONNECTED SECTION -->
-        <!-- Email subscription form -->
-        <section class="stay-connected-section" id="contact">
-            <div class="container">
-                <div class="stay-connected-content">
-                    <h2 class="section-title">Stay Connected</h2>
-                    <div class="section-accent"></div>
-                    <p>What's happening in Earth science?</p>
-                    <p class="stay-connected-subtitle">Sign up for updates on events, opportunities and resources.</p>
-                    
-                    <form class="newsletter-form" action="#" method="POST">
-                        <input 
-                            type="email" 
-                            class="form-input" 
-                            placeholder="Your email address" 
-                            required
-                        >
-                        <button type="submit" class="form-btn">
-                            Subscribe <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </form>
-
-                    <div class="social-icons">
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
+                    <div class="placeholder-item" id="registration-placeholder">
+                        <strong>Registration form</strong>
+                        <span>Link to be added once confirmed.</span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER SECTION -->
-    <!-- Footer with logo, links and social media -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- Footer logo and tagline -->
-                <div class="footer-logo">
-                    <div class="logo-icon-small">
+        <div class="container footer-content">
+            <div>
+                <a class="brand brand-footer" href="#home">
+                    <span class="brand-mark" aria-hidden="true">
                         <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 25 L15 15 L20 20 L25 10 L30 25" stroke="#f7f5f0" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8 28 Q20 32 32 28" stroke="#f7f5f0" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <path d="M10 25 L15 15 L20 20 L25 10 L30 25" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8 28 Q20 32 32 28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" />
                         </svg>
-                    </div>
-                    <div>
-                        <h3>Earth Science Tasmania</h3>
-                        <p class="footer-tagline">People. Places. Possibilities.</p>
-                    </div>
-                </div>
-
-                <!-- Footer links -->
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#privacy">Privacy</a>
-                    <a href="#accessibility">Accessibility</a>
-                </div>
-
-                <!-- Social media links -->
-                <div class="footer-social">
-                    <a href="#" class="social-link" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="social-link" aria-label="Facebook">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="#" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="social-link" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
+                    </span>
+                    <span>Earth Science Tasmania</span>
+                </a>
+                <p class="footer-note">Tasmanian Geoscience Forum · November 2026</p>
             </div>
 
-            <!-- Footer bottom -->
-            <div class="footer-bottom">
-                <p>&copy; 2024 Earth Science Tasmania. All rights reserved.</p>
+            <div class="footer-column">
+                <h2>Participating organisations</h2>
+                <p>Space for confirmed participating organisations.</p>
             </div>
+
+            <div class="footer-column">
+                <h2>Contact</h2>
+                <p>Contact information to be added.</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Earth Science Tasmania</p>
         </div>
     </footer>
 </body>
